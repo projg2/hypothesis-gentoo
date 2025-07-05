@@ -17,7 +17,9 @@ def test_reject_most(i: int) -> None:
 
 def test_disabled(pytester: pytest.Pytester) -> None:
     pytester.makepyfile(TEST_CASE)
-    result = pytester.runpytest()
+    result = pytester.runpytest(
+        "-p", "hypothesispytest", "--hypothesis-profile=default"
+    )
     result.assert_outcomes(failed=1)
 
 
