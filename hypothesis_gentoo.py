@@ -1,6 +1,6 @@
 """Plugin to create "gentoo" hypothesis profile, disabling health checks"""
 
-__version__ = "0"
+__version__ = "1"
 
 
 def _hypothesis_setup_hook() -> None:
