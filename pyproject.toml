@@ -14,3 +14,12 @@ Home = "https://github.com/projg2/hypothesis_gentoo/"
 
 [project.entry-points.hypothesis]
 _ = "hypothesis_gentoo:_hypothesis_setup_hook"
+
+[dependency-groups]
+test = [
+    "hypothesis",
+    "pytest",
+]
+
+[tool.flit.sdist]
+include = ["test/*.py", "tox.ini"]

@@ -3,7 +3,7 @@
 __version__ = "0"
 
 
-def _hypothesis_setup_hook():
+def _hypothesis_setup_hook() -> None:
     import hypothesis
 
     hypothesis.settings.register_profile(
