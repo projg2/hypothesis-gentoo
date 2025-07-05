@@ -23,5 +23,7 @@ def test_disabled(pytester: pytest.Pytester) -> None:
 
 def test_enabled(pytester: pytest.Pytester) -> None:
     pytester.makepyfile(TEST_CASE)
-    result = pytester.runpytest("--hypothesis-profile=gentoo")
+    result = pytester.runpytest(
+        "-p", "hypothesispytest", "--hypothesis-profile=gentoo"
+    )
     result.assert_outcomes(passed=1)
