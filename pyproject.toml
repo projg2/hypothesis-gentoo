@@ -10,7 +10,7 @@ license-files = ["LICENSE"]
 dynamic = ["version", "description"]
 
 [project.urls]
-Home = "https://github.com/projg2/hypothesis_gentoo/"
+Home = "https://github.com/projg2/hypothesis-gentoo"
 
 [project.entry-points.hypothesis]
 _ = "hypothesis_gentoo:_hypothesis_setup_hook"
