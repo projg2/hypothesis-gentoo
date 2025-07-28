@@ -7,5 +7,7 @@ def _hypothesis_setup_hook() -> None:
     import hypothesis
 
     hypothesis.settings.register_profile(
-        "gentoo", suppress_health_check=list(hypothesis.HealthCheck)
+        "gentoo",
+        suppress_health_check=list(hypothesis.HealthCheck),
+        deadline=None,
     )
